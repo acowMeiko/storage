@@ -1,0 +1,119 @@
+2025-12-09 19:17:12,534 - asyncio - INFO - ============================================================
+2025-12-09 19:17:12,535 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 19:17:12,536 - asyncio - INFO - ============================================================
+2025-12-09 19:17:22,109 - asyncio - ERROR - 程序执行失败: module 'config' has no attribute 'DPO_FILE'
+Traceback (most recent call last):
+  File "D:\experiment\code\metanew\stage_second.py", line 153, in <module>
+    prepare_step2_update_memory_from_dpo()
+  File "D:\experiment\code\metanew\stage_second.py", line 29, in prepare_step2_update_memory_from_dpo
+    dpo_file = Path(config.DPO_FILE)
+                    ^^^^^^^^^^^^^^^
+AttributeError: module 'config' has no attribute 'DPO_FILE'. Did you mean: 'LOG_FILE'?
+2025-12-09 19:20:23,463 - asyncio - INFO - ============================================================
+2025-12-09 19:20:23,465 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 19:20:23,465 - asyncio - INFO - ============================================================
+2025-12-09 19:20:23,465 - asyncio - ERROR - 程序执行失败: name 'config' is not defined
+Traceback (most recent call last):
+  File "D:\experiment\code\metanew\stage_second.py", line 162, in <module>
+    prepare_step2_update_memory_from_dpo()
+  File "D:\experiment\code\metanew\stage_second.py", line 30, in prepare_step2_update_memory_from_dpo
+    memory = MemoryManager()
+             ^^^^^^^^^^^^^^^
+  File "D:\experiment\code\metanew\module\memory_module.py", line 17, in __init__
+    self.path = path or str(config.MEMORY_FILE)
+                            ^^^^^^
+NameError: name 'config' is not defined
+2025-12-09 19:33:38,017 - asyncio - INFO - ============================================================
+2025-12-09 19:33:38,018 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 19:33:38,018 - asyncio - INFO - ============================================================
+2025-12-09 19:33:38,018 - asyncio - ERROR - 程序执行失败: name 'json' is not defined
+Traceback (most recent call last):
+  File "D:\experiment\code\metanew\module\memory_module.py", line 29, in load
+    loaded_data = json.load(f)
+                  ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\experiment\code\metanew\stage_second.py", line 168, in <module>
+    prepare_step2_update_memory_from_dpo()
+  File "D:\experiment\code\metanew\stage_second.py", line 36, in prepare_step2_update_memory_from_dpo
+    memory = MemoryManager()
+             ^^^^^^^^^^^^^^^
+  File "D:\experiment\code\metanew\module\memory_module.py", line 19, in __init__
+    self.memory = self.load()
+                  ^^^^^^^^^^^
+  File "D:\experiment\code\metanew\module\memory_module.py", line 38, in load
+    except json.JSONDecodeError:
+           ^^^^
+NameError: name 'json' is not defined. Did you forget to import 'json'
+2025-12-09 19:34:23,195 - asyncio - INFO - ============================================================
+2025-12-09 19:34:23,197 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 19:34:23,197 - asyncio - INFO - ============================================================
+2025-12-09 19:34:23,199 - asyncio - ERROR - 程序执行失败: name 'SentenceTransformer' is not defined
+Traceback (most recent call last):
+  File "D:\experiment\code\metanew\stage_second.py", line 168, in <module>
+    prepare_step2_update_memory_from_dpo()
+  File "D:\experiment\code\metanew\stage_second.py", line 36, in prepare_step2_update_memory_from_dpo
+    memory = MemoryManager()
+             ^^^^^^^^^^^^^^^
+  File "D:\experiment\code\metanew\module\memory_module.py", line 23, in __init__
+    self.embedder = SentenceTransformer(config.SENTENCE_TRANSFORMER_MODEL, device='cuda:0')
+                    ^^^^^^^^^^^^^^^^^^^
+NameError: name 'SentenceTransformer' is not defined
+2025-12-09 19:52:42,611 - asyncio - INFO - ============================================================
+2025-12-09 19:52:42,611 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 19:52:42,611 - asyncio - INFO - ============================================================
+2025-12-09 19:52:42,612 - asyncio - ERROR - 程序执行失败: name 'SentenceTransformer' is not defined
+Traceback (most recent call last):
+  File "/home/czhu/workplace/task/metaEvo/stage_second.py", line 168, in <module>
+    prepare_step2_update_memory_from_dpo()
+  File "/home/czhu/workplace/task/metaEvo/stage_second.py", line 36, in prepare_step2_update_memory_from_dpo
+    memory = MemoryManager()
+             ^^^^^^^^^^^^^^^
+  File "/home/czhu/workplace/task/metaEvo/module/memory_module.py", line 23, in __init__
+    self.embedder = SentenceTransformer(config.SENTENCE_TRANSFORMER_MODEL, device='cuda:0')
+                    ^^^^^^^^^^^^^^^^^^^
+NameError: name 'SentenceTransformer' is not defined
+2025-12-09 19:57:38,624 - asyncio - INFO - ============================================================
+2025-12-09 19:57:38,625 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 19:57:38,625 - asyncio - INFO - ============================================================
+2025-12-09 19:57:38,627 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/share/hcz/all-MiniLM-L6-v2/
+2025-12-09 19:57:39,242 - asyncio - INFO - MemoryManager 初始化完成
+2025-12-09 19:57:39,256 - asyncio - ERROR - 读取JSON文件失败: Extra data: line 2 column 1 (char 5108)
+2025-12-09 19:57:39,256 - asyncio - INFO - 程序执行完成
+2025-12-09 20:04:58,496 - asyncio - INFO - ============================================================
+2025-12-09 20:04:58,496 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 20:04:58,496 - asyncio - INFO - ============================================================
+2025-12-09 20:04:58,499 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/share/hcz/all-MiniLM-L6-v2/
+2025-12-09 20:04:58,902 - asyncio - INFO - MemoryManager 初始化完成
+2025-12-09 20:04:58,916 - asyncio - WARNING - 读取断点文件失败: Expecting value: line 1 column 1 (char 0)，从头开始
+2025-12-09 20:04:58,916 - asyncio - INFO - 阶段1/3: 数据预处理和过滤
+2025-12-09 20:04:58,926 - asyncio - INFO - 准备批处理 404 条数据
+2025-12-09 20:04:58,926 - asyncio - INFO - 阶段2/3: 批量生成任务描述和原则
+2025-12-09 20:04:58,926 - asyncio - INFO - 批量生成任务描述...
+2025-12-09 20:05:03,724 - inference.local_inference - INFO - ============================================================
+2025-12-09 20:05:03,724 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2025-12-09 20:05:03,725 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2025-12-09 20:05:03,725 - inference.local_inference - INFO - 指定GPU: 4
+2025-12-09 20:05:03,725 - inference.local_inference - INFO - ============================================================
+2025-12-09 20:05:07,943 - asyncio - WARNING - 程序被用户中断
+2025-12-09 20:06:05,375 - asyncio - INFO - ============================================================
+2025-12-09 20:06:05,375 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 20:06:05,375 - asyncio - INFO - ============================================================
+2025-12-09 20:06:05,378 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/share/hcz/all-MiniLM-L6-v2/
+2025-12-09 20:06:05,838 - asyncio - INFO - MemoryManager 初始化完成
+2025-12-09 20:06:05,853 - asyncio - WARNING - 读取断点文件失败: Expecting value: line 1 column 1 (char 0)，从头开始
+2025-12-09 20:06:05,853 - asyncio - INFO - 阶段1/3: 数据预处理和过滤
+2025-12-09 20:06:57,370 - asyncio - INFO - 准备批处理 404 条数据
+2025-12-09 20:06:59,514 - asyncio - INFO - 阶段2/3: 批量生成任务描述和原则
+2025-12-09 20:07:30,579 - asyncio - INFO - ============================================================
+2025-12-09 20:07:30,580 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-09 20:07:30,580 - asyncio - INFO - ============================================================
+2025-12-09 20:07:30,582 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/share/hcz/all-MiniLM-L6-v2/
+2025-12-09 20:07:31,113 - asyncio - INFO - MemoryManager 初始化完成
+2025-12-09 20:07:31,127 - asyncio - WARNING - 读取断点文件失败: Expecting value: line 1 column 1 (char 0)，从头开始
+2025-12-09 20:07:31,127 - asyncio - INFO - 阶段1/3: 数据预处理和过滤
+2025-12-09 20:07:31,184 - asyncio - INFO - 准备批处理 404 条数据
+2025-12-09 20:07:31,184 - asyncio - INFO - 阶段2/3: 批量生成任务描述和原则
