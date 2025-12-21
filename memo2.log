@@ -1,0 +1,480 @@
+2025-12-11 09:04:37,893 - asyncio - INFO - ============================================================
+2025-12-11 09:04:37,893 - asyncio - INFO - Step 2: 开始更新Memory
+2025-12-11 09:04:37,893 - asyncio - INFO - ============================================================
+2025-12-11 09:04:37,895 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/metanew/em_model/all-MiniLM-L6-v2
+2025-12-11 09:04:38,207 - asyncio - INFO - MemoryManager 初始化完成
+2025-12-11 09:04:38,220 - asyncio - INFO - 阶段1/3: 数据预处理和过滤
+2025-12-11 09:04:38,229 - asyncio - INFO - 准备批处理 396 条数据
+2025-12-11 09:04:38,230 - asyncio - INFO - 阶段2/3: 批量生成任务描述和原则
+2025-12-11 09:04:38,230 - asyncio - INFO - 批量生成任务描述...
+INFO 12-11 09:04:38 [__init__.py:239] Automatically detected platform cuda.
+2025-12-11 09:04:39,044 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 4,5
+2025-12-11 09:04:39,045 - inference.local_inference - INFO - ============================================================
+2025-12-11 09:04:39,045 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2025-12-11 09:04:39,045 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2025-12-11 09:04:39,045 - inference.local_inference - INFO - ============================================================
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 12-11 09:04:44 [config.py:585] This model supports multiple tasks: {'score', 'generate', 'embed', 'classify', 'reward'}. Defaulting to 'generate'.
+INFO 12-11 09:04:44 [config.py:1519] Defaulting to use mp for distributed inference
+INFO 12-11 09:04:44 [config.py:1697] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 12-11 09:04:46 [utils.py:2181] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/getting_started/troubleshooting.html#python-multiprocessing for more information. Reason: CUDA is initialized
+INFO 12-11 09:04:50 [__init__.py:239] Automatically detected platform cuda.
+INFO 12-11 09:04:51 [core.py:54] Initializing a V1 LLM engine (v0.8.2) with config: model='/home/models/qwen_dpo2_lora', speculative_config=None, tokenizer='/home/models/qwen_dpo2_lora', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=/home/models/qwen_dpo2_lora, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"level":3,"custom_ops":["none"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"use_inductor":true,"compile_sizes":[],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":512}
+WARNING 12-11 09:04:51 [multiproc_worker_utils.py:306] Reducing Torch parallelism from 64 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+INFO 12-11 09:04:51 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1], buffer_handle=(2, 10485760, 10, 'psm_c1de549d'), local_subscribe_addr='ipc:///tmp/7579367e-70ab-4886-b0c1-71b58b2b893a', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 12-11 09:04:56 [__init__.py:239] Automatically detected platform cuda.
+WARNING 12-11 09:04:57 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f47bc27f250>
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:04:57 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_6ddda872'), local_subscribe_addr='ipc:///tmp/3b670b03-5d43-47e8-82ad-886fe90c61db', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 12-11 09:05:01 [__init__.py:239] Automatically detected platform cuda.
+WARNING 12-11 09:05:03 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7efd1d8969d0>
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:03 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_40508852'), local_subscribe_addr='ipc:///tmp/553efb27-02de-4e54-892d-7fb78c3eef5d', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:03 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:03 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:03 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:03 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:04 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_4,5.json
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:04 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_4,5.json
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:04 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[1], buffer_handle=(1, 4194304, 6, 'psm_10684361'), local_subscribe_addr='ipc:///tmp/d60411f5-17c6-4a8e-a6e5-0993baacc060', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:04 [parallel_state.py:954] rank 0 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 0
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:04 [parallel_state.py:954] rank 1 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 1
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:04 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:04 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:04 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:04 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m WARNING 12-11 09:05:04 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m WARNING 12-11 09:05:04 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/6 [00:00<?, ?it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards:  17% Completed | 1/6 [00:00<00:03,  1.48it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards:  33% Completed | 2/6 [00:01<00:02,  1.46it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards:  50% Completed | 3/6 [00:02<00:02,  1.45it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards:  67% Completed | 4/6 [00:02<00:01,  1.53it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards:  83% Completed | 5/6 [00:03<00:00,  1.51it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:03<00:00,  1.59it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:03<00:00,  1.54it/s]
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m 
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:08 [loader.py:447] Loading weights took 3.93 seconds
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:08 [loader.py:447] Loading weights took 3.95 seconds
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:08 [gpu_model_runner.py:1186] Model loading took 13.9281 GB and 4.121601 seconds
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:08 [gpu_model_runner.py:1186] Model loading took 13.9281 GB and 4.140329 seconds
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:18 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/25a18384dd/rank_0_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:18 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/25a18384dd/rank_1_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:18 [backends.py:425] Dynamo bytecode transform time: 9.96 s
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:18 [backends.py:425] Dynamo bytecode transform time: 9.96 s
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:19 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:19 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:27 [monitor.py:33] torch.compile takes 9.96 s in total
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:27 [monitor.py:33] torch.compile takes 9.96 s in total
+INFO 12-11 09:05:28 [kv_cache_utils.py:566] GPU KV cache size: 546,608 tokens
+INFO 12-11 09:05:28 [kv_cache_utils.py:569] Maximum concurrency for 4,096 tokens per request: 133.45x
+INFO 12-11 09:05:28 [kv_cache_utils.py:566] GPU KV cache size: 552,176 tokens
+INFO 12-11 09:05:28 [kv_cache_utils.py:569] Maximum concurrency for 4,096 tokens per request: 134.81x
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:50 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:50 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=1 pid=23985)[0;0m INFO 12-11 09:05:50 [gpu_model_runner.py:1534] Graph capturing finished in 21 secs, took 0.72 GiB
+[1;36m(VllmWorker rank=0 pid=23968)[0;0m INFO 12-11 09:05:50 [gpu_model_runner.py:1534] Graph capturing finished in 21 secs, took 0.72 GiB
+INFO 12-11 09:05:50 [core.py:151] init engine (profile, create kv cache, warmup model) took 41.88 seconds
+2025-12-11 09:05:50,498 - inference.local_inference - INFO - vLLM模型初始化完成
+2025-12-11 09:10:31,910 - asyncio - INFO - 批量生成新原则...
+2025-12-11 09:15:35,776 - asyncio - INFO - 保存中间生成结果到: /home/metanew/output/stage2_generated.json
+2025-12-11 09:15:35,843 - asyncio - INFO - 阶段3/3: 解析结果并更新Memory
+更新Memory:   0%|          | 0/396 [00:00<?, ?it/s]2025-12-11 09:15:35,844 - asyncio - WARNING - 第 0 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,844 - asyncio - WARNING - 第 1 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 2 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 3 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 4 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 5 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 6 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 7 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 8 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 9 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 10 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 11 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 12 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 13 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 14 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 15 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,845 - asyncio - WARNING - 第 16 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 17 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 18 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 19 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 20 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 21 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 22 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 23 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 24 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 25 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 26 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 27 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 28 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 29 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 30 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,846 - asyncio - WARNING - 第 31 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 32 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 33 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 34 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 35 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 36 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 37 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 38 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 39 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 40 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 41 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 42 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 43 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 44 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 45 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 46 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,847 - asyncio - WARNING - 第 47 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 48 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 49 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 50 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 51 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 52 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 53 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 54 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 55 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 56 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 57 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 58 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 59 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 60 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 61 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 62 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,848 - asyncio - WARNING - 第 63 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 64 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 65 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 66 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 67 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 68 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 69 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 70 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 71 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 72 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 73 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 74 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 75 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 76 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 77 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 78 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 79 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,849 - asyncio - WARNING - 第 80 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 81 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 82 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 83 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 84 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 85 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 86 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 87 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 88 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 89 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 90 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 91 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 92 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 93 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 94 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 95 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,850 - asyncio - WARNING - 第 96 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 97 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 98 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 99 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 100 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 101 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 102 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 103 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 104 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 105 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 106 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 107 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 108 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 109 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 110 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 111 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 112 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,851 - asyncio - WARNING - 第 113 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 114 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 115 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 116 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 117 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 118 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 119 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 120 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 121 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 122 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 123 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 124 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 125 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 126 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 127 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 128 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,852 - asyncio - WARNING - 第 129 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 130 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 131 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 132 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 133 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 134 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 135 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 136 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 137 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 138 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 139 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 140 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 141 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 142 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 143 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 144 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 145 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,853 - asyncio - WARNING - 第 146 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 147 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 148 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 149 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 150 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 151 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 152 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 153 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 154 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 155 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 156 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 157 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 158 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 159 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 160 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 161 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,854 - asyncio - WARNING - 第 162 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 163 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 164 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 165 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 166 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 167 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 168 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 169 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 170 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 171 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 172 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 173 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 174 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 175 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 176 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 177 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 178 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 179 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 180 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 181 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 182 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 183 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 184 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 185 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 186 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 187 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 188 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 189 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 190 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,855 - asyncio - WARNING - 第 191 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 192 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 193 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 194 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 195 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 196 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 197 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 198 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 199 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 200 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 201 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 202 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 203 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 204 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 205 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 206 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 207 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 208 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 209 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 210 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 211 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 212 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 213 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 214 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 215 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 216 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 217 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 218 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 219 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 220 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 221 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 222 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 223 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 224 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,856 - asyncio - WARNING - 第 225 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 226 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 227 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 228 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 229 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 230 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 231 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 232 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 233 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 234 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 235 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 236 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 237 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 238 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 239 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 240 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 241 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 242 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 243 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 244 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 245 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 246 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 247 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 248 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 249 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 250 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 251 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 252 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 253 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 254 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 255 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 256 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 257 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 258 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 259 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,857 - asyncio - WARNING - 第 260 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 261 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 262 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 263 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 264 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 265 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 266 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 267 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 268 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 269 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 270 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 271 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 272 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 273 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 274 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 275 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 276 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 277 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 278 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 279 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 280 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 281 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 282 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 283 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 284 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 285 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 286 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 287 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 288 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 289 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 290 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 291 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 292 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 293 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,858 - asyncio - WARNING - 第 294 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 295 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 296 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 297 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 298 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 299 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 300 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 301 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 302 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 303 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 304 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 305 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 306 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 307 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 308 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 309 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 310 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 311 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 312 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 313 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 314 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 315 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 316 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 317 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 318 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 319 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 320 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 321 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 322 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 323 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 324 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 325 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 326 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 327 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,859 - asyncio - WARNING - 第 328 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 329 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 330 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 331 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 332 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 333 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 334 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 335 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 336 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 337 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 338 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 339 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 340 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 341 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 342 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 343 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 344 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 345 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 346 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 347 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 348 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 349 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 350 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 351 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 352 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 353 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 354 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 355 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 356 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 357 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 358 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 359 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 360 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 361 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 362 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,860 - asyncio - WARNING - 第 363 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 364 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 365 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 366 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 367 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 368 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 369 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 370 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 371 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 372 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 373 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 374 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 375 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 376 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 377 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 378 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 379 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 380 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 381 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 382 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 383 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 384 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 385 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 386 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 387 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 388 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 389 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 390 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 391 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 392 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 393 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 394 项解析任务描述失败: Expecting value: line 1 column 1 (char 0)，跳过
+2025-12-11 09:15:35,861 - asyncio - WARNING - 第 395 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+更新Memory: 100%|██████████| 396/396 [00:00<00:00, 22923.17it/s]
+2025-12-11 09:15:35,862 - asyncio - INFO - Memory更新完成
+2025-12-11 09:15:35,863 - asyncio - INFO - 程序执行完成
+2025-12-11 09:15:39,209 - inference.local_inference - INFO - 清理vLLM模型...
+2025-12-11 09:15:39,242 - inference.local_inference - INFO - CUDA缓存已清理
